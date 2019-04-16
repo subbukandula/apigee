@@ -1,0 +1,38 @@
+An API proxy is your interface to developers that want to use your backend services. Rather than having them consume those services directly, they access an Edge API proxy that you create. With a proxy, you can provide value-added features such as:
+
+    Security
+    Rate limiting
+    Quotas
+    Caching & persistence
+    Analytics
+    Transformations
+    Fault handling
+
+Apigee Edge is a platform for developing and managing API proxies. Think of a proxy as an abstraction layer that "fronts" for your backend service APIs and provides value-added features like security, rate limiting, quotas, analytics, and more
+
+The Edge management UI is a browser-based tool you can use to create, configure, and manage API proxies and API products. There are a few tasks that require you to use the management API, though.
+
+In the Edge management UI, you can:
+
+    Create API proxies by editing code and tracing flow of requests through your proxies.
+    Create API products that bundle proxies for exposure to client requests.
+    Manage developers and developer apps.
+    Configure your test and production environments.
+    Implement JavaScript and Node.js applications.
+
+
+    GET: Retrieves a list of resources, or the profile of a specific resource.
+    POST: Creates a resource, or passed in a parameter, performed an action on resource. For example, when 	you revoke OAuth access tokens, you use the POST method along with the parameter action=revoke.
+    PUT: Updates an existing resource.
+    DELETE: Deletes an existing resource.
+
+Publish this API:
+As an API provider, you create API products to bundle your APIs and make them available to app developers for consumption
+Specifically, an API product bundles together the following:
+
+    Collection of API resources (URIs)
+    Service plan
+    Metadata specific to your business for monitoring or analytics
+
+
+https://gcp-cs-training-01-prod.apigee.net/training/db
