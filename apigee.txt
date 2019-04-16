@@ -36,3 +36,109 @@ Specifically, an API product bundles together the following:
 
 
 https://gcp-cs-training-01-prod.apigee.net/training/db
+
+wifi password: pUp3EkaP
+developer.payeezy.com
+
+Apigee Edge is a platform for developing and managing API proxies
+
+REST 
+ Resource oriented
+ HTTP verb driven
+ JSON payload
+	keep primary resource to 2 levels (noun oriented)
+	Verb orientes(NO)
+ Use query paramaters instead of complex pathing (?)
+ Seven minimal codes
+	200/201/304/400/401/404/500
+ Pagination
+ 
+API Design
+API Versioning
+	not current version release
+		version in URI
+		version in Headers
+API proxy in Edge
+You expose APIs on Apigee Edge by implementing API proxies. API proxies decouple the 
+app-facing API from your backend services, shielding those apps from backend code changes. 
+As you make backend changes to your services, apps continue to call the same API without 
+any interruption.
+	Proxy endpoints
+		Defines the way client apps consume your APIs
+	Taret endpoints
+		Defines the way the API proxy interacts with your backend services. 
+	Resources
+
+Policy flows
+	
+Policy
+	add proxy
+	http://svenkatakandula-eval-test.apigee.net/v1/testproxy/categories
+Edge enables you to control API behavior without writing any code by using policies. A policy is like a module that implements a specific, limited management function as part of the proxy request/response flow
+
+Load Balancing:
+===============
+<HTTPTargetConnection>
+        
+	<Properties/>
+        
+	<!--<URL>https://gcp-cs-training-01-prod.apigee.net/training/db</URL> -->
+        
+	<LoadBalancer>
+            
+		<Server name="TS-Retail"/>
+        
+	</LoadBalancer>
+        
+	<Path>/training/db</Path>
+    
+</HTTPTargetConnection>	
+
+Developers
+API products
+	Publish --> Product 
+		Automatically approve requests
+	API Key
+	<APIKey ref="request.queryparam.apikey"/>
+	<APIKey ref="request.header.x-apikey"/>
+
+apikeys --> not secure
+OAuth proxy:
+	generate limited time token for us
+	accesstoken
+	refresh_accesstoken
+	Grant type: client_credentials
+		Headers: Authorization Basic id
+	API proxy
+		Headers: Authorization Bearer <access_token>
+
+Quota
+Spike Arrest
+Shared Flow
+Flow hook
+	KVM(key value Map) (admin --> environments --> KVM)
+Fault Rules and Error messages
+	Assign message
+
+Service callout
+	Assign message(for service callout requests)
+	Extract variables(to extract service callout responses)
+Mashing up the resources
+	google maps api: http://apac-poc1-test.apigee.net/googlemaps
+	Adding javascript policy for adding address
+Caching
+
+
+Support:
+==========
+cloud.google.com/apigee/support  
+
+
+
+
+
+
+
+
+
+
