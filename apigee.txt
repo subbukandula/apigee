@@ -42,6 +42,8 @@ developer.payeezy.com
 
 Apigee Edge is a platform for developing and managing API proxies
 
+An API product is a bundle of API proxies combined with a service plan. That service plan can set access limits on API proxies, provide security, allow monitoring and analytics, and provide additional features. API products are also the central mechanism that Edge uses for authorization and access control to your APIs.
+
 REST 
  Resource oriented
  HTTP verb driven
